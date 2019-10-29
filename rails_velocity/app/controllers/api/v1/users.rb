@@ -6,12 +6,12 @@ module API
         desc 'Returns all users'
         get "" do
           User.all
+        end
 
-          # render json: @users, status: :ok
-        #   @user = User.find_by(email: params[:email])
-        #   if @user
-        #     return @user
-        # end
+        desc 'Returns a specific user'
+        get "/:user_id" do
+          # User.where(id: params[:user_id])
+          Bike.where(user_id: params[:user_id])
         end
       end
     end
