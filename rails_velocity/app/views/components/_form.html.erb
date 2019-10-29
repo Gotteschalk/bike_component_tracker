@@ -1,0 +1,37 @@
+<%= form_with(model: component, local: true) do |form| %>
+  <% if component.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(component.errors.count, "error") %> prohibited this component from being saved:</h2>
+
+      <ul>
+        <% component.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :comp_name %>
+    <%= form.text_field :comp_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distance_done %>
+    <%= form.number_field :distance_done %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_distance %>
+    <%= form.number_field :max_distance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bike_id %>
+    <%= form.text_field :bike_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

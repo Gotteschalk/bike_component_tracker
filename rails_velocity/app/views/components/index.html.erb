@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Components</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comp name</th>
+      <th>Distance done</th>
+      <th>Max distance</th>
+      <th>Bike</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @components.each do |component| %>
+      <tr>
+        <td><%= component.comp_name %></td>
+        <td><%= component.distance_done %></td>
+        <td><%= component.max_distance %></td>
+        <td><%= component.bike_id %></td>
+        <td><%= link_to 'Show', component %></td>
+        <td><%= link_to 'Edit', edit_component_path(component) %></td>
+        <td><%= link_to 'Destroy', component, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Component', new_component_path %>

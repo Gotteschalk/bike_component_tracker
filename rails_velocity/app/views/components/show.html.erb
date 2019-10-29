@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comp name:</strong>
+  <%= @component.comp_name %>
+</p>
+
+<p>
+  <strong>Distance done:</strong>
+  <%= @component.distance_done %>
+</p>
+
+<p>
+  <strong>Max distance:</strong>
+  <%= @component.max_distance %>
+</p>
+
+<p>
+  <strong>Bike:</strong>
+  <%= @component.bike_id %>
+</p>
+
+<%= link_to 'Edit', edit_component_path(@component) %> |
+<%= link_to 'Back', components_path %>
