@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>Strava:</strong>
+  <%= @user.strava_id %>
+</p>
+
+<p>
+  <strong>Access token:</strong>
+  <%= @user.access_token %>
+</p>
+
+<p>
+  <strong>Access token expiry:</strong>
+  <%= @user.access_token_expiry %>
+</p>
+
+<p>
+  <strong>Refresh token:</strong>
+  <%= @user.refresh_token %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
